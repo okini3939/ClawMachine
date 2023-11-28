@@ -2,6 +2,8 @@
 
 ジャンクのクレーンゲーム（UFOキャッチャー的なもの）マシーンで遊ぶ。
 
+https://twitter.com/0666444555/status/1728303453435478089
+
 ジャンクのため、このページに記載の情報と違うことがあります。実物に合わせていろいろ工夫してみましょう。
 
 そもそも故障していたり個体差もいろいろあると思います。安いのであきらめてもう一台買いましょう。
@@ -11,7 +13,7 @@
 > 動く部分で指をつめたりしないよう、ケガにも注意しましょう
 
 > [!NOTE]
-> 販売店の共立電子産業（デジット）とは関係ありませんので、問い合わせなどしないようお願いします\
+> 販売店のデジット（共立電子産業）とは関係ありませんので、問い合わせなどしないようお願いします\
 > このページの内容については無保証です
 
 ## マシン概要
@@ -138,10 +140,11 @@ X-Y軸はベルト駆動のリニアアクチュエータ、Z軸はワイヤー�
 - PNPトランジスタは 2SA1015 など
 - リレーは1回路2接点、電圧12Vのものを使ったが各自適当に
 
-<img src="https://github.com/okini3939/ClawMachine/raw/main/images/pcb01.jpg" alt="基板 X-Y-Z" width="250" height="250"
-/> <img src="https://github.com/okini3939/ClawMachine/raw/main/images/pcb02.jpg" alt="基板 X-Y-Z" width="250" height="250" />
-
 ジョイスティック（アーケードコントローラー）などでコントロールするとよさそう。
+
+<img src="https://github.com/okini3939/ClawMachine/raw/main/images/pcb01.jpg" alt="基板 X-Y-Z" width="250" height="250"
+/> <img src="https://github.com/okini3939/ClawMachine/raw/main/images/pcb02.jpg" alt="基板 X-Y-Z" width="250" height="250"
+/> <img src="https://github.com/okini3939/ClawMachine/raw/main/images/ctrl01.jpg" alt="コントローラー" width="250" height="250" />
 
 ### 爪 コントローラー
 
@@ -151,7 +154,8 @@ X-Y軸はベルト駆動のリニアアクチュエータ、Z軸はワイヤー�
 爪はステッピングモーターとラックアンドピニオンで動いています。
 
 <img src="https://github.com/okini3939/ClawMachine/raw/main/images/motor03.jpg" alt="ステッピングモーター" width="250" height="250"
-/> <img src="https://github.com/okini3939/ClawMachine/raw/main/images/motor05.jpg" alt="爪の機構" width="250" height="250" />
+/> <img src="https://github.com/okini3939/ClawMachine/raw/main/images/motor05.jpg" alt="爪の機構" width="250" height="250"
+/> <img src="https://github.com/okini3939/ClawMachine/raw/main/images/craw01.jpg" alt="爪" width="250" height="250" />
 
 開ききったところでリミットセンサーが働き、閉じる方向へはモーターのステップ数でどれだけ戻すかを制御しています。
 戻す量によりバネの伸び率が変わり、爪がつかむ強さをコントロールしているようです。
@@ -159,7 +163,6 @@ X-Y軸はベルト駆動のリニアアクチュエータ、Z軸はワイヤー�
 たぶんこのあたりに確率設定などのノウハウがあるのでしょう。
 
 ステッピングモーターを使う都合上、仕方なくマイコンを使用します。
-ロジック回路で組める人はそれもいいでしょう。
 
 <img src="https://github.com/okini3939/ClawMachine/raw/main/images/clawmachine_claw.png" alt="回路図 Claw" />
 
@@ -169,7 +172,7 @@ X-Y軸はベルト駆動のリニアアクチュエータ、Z軸はワイヤー�
   - 似たようなドライバICはいろいろあるので何でもよい（3Dプリンタ用のドライバモジュールでもOK）
 - マイコンは Raspberry Pi Pico
   - https://www.raspberrypi.com/products/raspberry-pi-pico/
-  - Arduino や Mbed など、各自の使いやすいマイコンでつくりましょう
+  - Arduino や Mbed や IchigoJam など、各自の使いやすいマイコンでつくりましょう
 - MachiKania type P というBASICシステムを入れてプログラムした
   - http://www.ze.em-net.ne.jp/~kenken/machikania/typep.html
   - <a href="https://github.com/okini3939/ClawMachine/raw/main/machikap/machikap.bas">ソースコード（BASIC）</a>
@@ -187,5 +190,5 @@ Z軸のワイヤーがプーリーから外れていることがあるのであ�
 
 <img src="https://github.com/okini3939/ClawMachine/raw/main/images/motor04.jpg" alt="Z軸のワイヤー" width="250" height="250" />
 
-廃棄するときは、鉄くず、アルミニウムくず、銅、樹脂などに分類して業者に引き取ってもらうか、大型ごみや産業廃棄物として適切に捨てましょう。
-
+廃棄するときは大型ごみや産業廃棄物として適切に捨てましょう。
+フレーム部分はけっこう大きめのアルミなので、鉄くず屋に持って行ってもよさそうです。
