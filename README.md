@@ -18,6 +18,7 @@
 
 - X-Y-Z軸：リバーシブルモーター、ギヤード、コンデンサ外付け
   - 横河サーテック RM-C6A2 ? (AC100V 0.15A)
+  - https://www.stc-m.co.jp/pdf/AC_Motor_catalog.pdf
   - 接続する端子により正転／逆転の切り替えができる
 - 爪：ステッピングモーター、ギヤード
   - 三龍社 P43EBG ? (12V)
@@ -32,7 +33,13 @@ X-Y-Zの機構部分しかないため、アルミや木材等、適当な材料
 
 今回は手元にあった使い古しのアルミフレームを使いました。
 
+製作例：
+
 <img src="https://github.com/okini3939/ClawMachine/raw/main/images/frame01.jpg" alt="フレーム全景" />
+
+<img src="https://github.com/okini3939/ClawMachine/raw/main/images/ctrl01.jpg" alt="コントローラー" width="250" height="250"
+/> <img src="https://github.com/okini3939/ClawMachine/raw/main/images/pcb05.jpg" alt="基板" width="250" height="250"
+/> <img src="https://github.com/okini3939/ClawMachine/raw/main/images/craw01.jpg" alt="爪" width="250" height="250" />
 
 <a href="https://github.com/okini3939/ClawMachine/raw/main/images/frame_cad.pdf">フレーム製作、実測のCADデータ (PDF)</a>
 
@@ -162,14 +169,14 @@ X-Y軸はベルト駆動のリニアアクチュエータ、Z軸はワイヤー�
   - 似たようなドライバICはいろいろあるので何でもよい（3Dプリンタ用のドライバモジュールでもOK）
 - マイコンは Raspberry Pi Pico
   - https://www.raspberrypi.com/products/raspberry-pi-pico/
-  - Arduino や Mbed など、各自の使いやすいマイコンでよい
+  - Arduino や Mbed など、各自の使いやすいマイコンでつくりましょう
 - MachiKania type P というBASICシステムを入れてプログラムした
   - http://www.ze.em-net.ne.jp/~kenken/machikania/typep.html
-  - 最小構成でプログラム埋め込み済みのuf2イメージファイル： <a href="https://github.com/okini3939/ClawMachine/raw/main/machikap/result.uf2">result.uf2</a>
-    - Raspberry Pi Pico のBOOTSELを押しながらパソコンへUSB接続し、認識されたドライブへ result.uf2 を書き込むだけでOK
   - <a href="https://github.com/okini3939/ClawMachine/raw/main/machikap/machikap.bas">ソースコード（BASIC）</a>
     - このプログラムでは、一度 OPEN方向へ動かしリミット検出してから CLOSE方向へ動かせるようになります
     - 適当に改造してみてください
+  - 最小構成でプログラム埋め込み済みのuf2イメージファイル： <a href="https://github.com/okini3939/ClawMachine/raw/main/machikap/result.uf2">result.uf2</a>
+    - Raspberry Pi Pico のBOOTSELを押しながらパソコンへUSB接続し、認識されたドライブへ result.uf2 を書き込むだけでOK
 
 <img src="https://github.com/okini3939/ClawMachine/raw/main/images/pcb03.jpg" alt="基板 Claw" width="250" height="250"
 /> <img src="https://github.com/okini3939/ClawMachine/raw/main/images/pcb04.jpg" alt="基板 Claw" width="250" height="250" />
