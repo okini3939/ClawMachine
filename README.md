@@ -6,7 +6,7 @@ https://twitter.com/0666444555/status/1728303453435478089
 
 ジャンクのため、このページに記載の情報と違うことがあります。実物に合わせていろいろ工夫してみましょう。
 
-そもそも故障していたり個体差もいろいろあると思います。安いのであきらめてもう一台買いましょう。
+部品が違ったりそもそも故障していたり個体差もいろいろあると思います。そのときは安いのであきらめてもう一台買いましょう。
 
 > [!WARNING]
 > モーターの電源にAC100Vを扱うので製作は慎重に **＜感電やショートに注意＞**\
@@ -29,7 +29,7 @@ https://twitter.com/0666444555/status/1728303453435478089
   - フォトインタラプタを遮ることによる各軸のリミット検出。
   - オープンコレクタ出力（通常時ON、リミット検出でOFF）
 
-ジャンクで購入した状態では各所がバラされているためまずは組み立てます。
+ジャンクで購入した状態では各所がバラされているのでまずは組み立てます。
 
 X-Y-Zの機構部分しかないため、アルミや木材等、適当な材料で外枠となるフレームを作りましょう。
 
@@ -129,6 +129,8 @@ X-Y軸はベルト駆動のリニアアクチュエータ、Z軸はワイヤー�
 
 リバーシブルモーターは3つの線が出ており、コンデンサとAC100Vを接続する配線を変えることにより回転方向を変えることができます。
 
+AC電源の周波数（60Hz/50Hz）の違いにより回転数も変わります。
+
 <img src="https://github.com/okini3939/ClawMachine/raw/main/images/motor01.jpg" alt="リバーシブルモーター" width="250" height="250"
 /> <img src="https://github.com/okini3939/ClawMachine/raw/main/images/motor02.jpg" alt="モーター用コンデンサ" width="250" height="250"
 /> <img src="https://github.com/okini3939/ClawMachine/raw/main/images/sensor01.jpg" alt="リミットセンサー"  width="250" height="250" />
@@ -181,6 +183,8 @@ X-Y軸はベルト駆動のリニアアクチュエータ、Z軸はワイヤー�
   - 最小構成でプログラム埋め込み済みのuf2イメージファイル： <a href="https://github.com/okini3939/ClawMachine/raw/main/machikap/result.uf2">result.uf2</a>
     - Raspberry Pi Pico のBOOTSELを押しながらパソコンへUSB接続し、認識されたドライブへ result.uf2 を書き込むだけでOK
 
+遊戯用のクレーンゲームは、ボタンを押すと クレーン下降→爪閉じる→クレーン上昇→取り出し口へ移動→爪開く を自動的に行うようになっているようです。
+
 <img src="https://github.com/okini3939/ClawMachine/raw/main/images/pcb03.jpg" alt="基板 Claw" width="250" height="250"
 /> <img src="https://github.com/okini3939/ClawMachine/raw/main/images/pcb04.jpg" alt="基板 Claw" width="250" height="250" />
 
@@ -192,3 +196,9 @@ Z軸のワイヤーがプーリーから外れていることがあるのであ�
 
 廃棄するときは大型ごみや産業廃棄物として適切に捨てましょう。
 フレーム部分はけっこう大きめのアルミなので、鉄くず屋に持って行ってもよさそうです。
+
+動画：
+
+- https://www.youtube.com/watch?v=zKRGTWhQ4BE
+- https://www.youtube.com/watch?v=mmuPXttXxh0
+
